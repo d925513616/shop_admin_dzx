@@ -1,0 +1,136 @@
+*{ 
+	margin:0;
+	padding:0;
+}
+
+/*涓婃柟鐨勯粦鑹查暱妗� */
+.div_title{
+	width:99.5%; 
+	height:24px;
+	background:#353C44;
+	margin:0 auto;
+	margin-top:3px;
+	position:relative;	 	
+}
+
+/* 浠ヤ笅涓や釜涓轰笂鏂归粦鏉′笂鐨勬枃瀛椾笌鍥剧墖 */
+.div_titlename{
+	length:200px;
+	position:absolute;
+	color:#E1E2E3;
+	font-size:12px;
+	top:4px;
+}
+
+.div_titlename img{
+	vertical-align:middle;
+	margin-left:10px;
+	margin-right:8px;
+	display:inline-block;
+}
+
+
+/* 涓昏〃鏍� */
+.edit_table{	
+	margin:0 auto;
+	width:85%;
+	margin-top:18px;  /* 璺濈涓婃柟榛戞潯鐨勪綅缃� */		
+	border-left:none; 
+  border-right:none;
+	border-top:1px solid #7CB2BC;
+	border-collapse:collapse;
+}
+
+.edit_table td{
+	border-collapse:collapse;
+	font-size:12px;
+	height:38px;
+	padding-left:20px;
+	border-bottom:1px dotted  #DADFE3;
+}
+
+
+/*
+  table td:first-child{background-color:#ff0000; color:#000000;} 鍙互閫夌涓�鍒�
+  table tr td:nth-child(1) {background-color:#ff0000; color:red;}  */
+
+
+/* 鏂囨湰妗嗗墠闈㈢殑璇存槑鏂囧瓧 */
+.td_info{
+	width:120px;
+	background: #F5F7F8;
+	text-align:right;
+	color:#295568;
+	font-weight:bold;
+	padding-right:20px;
+}
+
+/* 鎺у埗绗簩鍒�(瑁呮枃鏈鐨勯偅涓�鍒�)鐨勫搴� */
+.td_input{
+	width:410px;
+}
+
+/* 鍦ㄥ垎绫荤鐞嗙瓑椤甸潰,杩欎釜鍒楃殑瀹藉害瑕佺獎涓�浜�  */
+.td_input_short{
+	width:210px;
+}
+
+/* 鏂囨湰妗嗗悗闈㈢殑鎻愮ず淇℃伅 
+.edit_table label{
+	 color:#8FA0AC;
+ }
+*/
+
+/* 涓昏〃鏍间腑鐨則ext 杈撳叆妗� */
+.txtbox {
+	width:200px;
+	height:21px;
+	background:url(../images/loginbg_3.gif) repeat-x;
+	border-top: 1px solid #526E8E;
+	border-left: 1px solid #526E8E;
+    border-right:1px solid #BBD4EB;
+	border-bottom: 1px solid #BBD4EB;
+	line-height:21px;
+	padding-left:10px; 		
+	
+}
+
+/* 涓昏〃鏍间腑鐨勬枃鏈煙 */
+.txtarea{
+	background:url(../images/loginbg_3.gif) repeat-x;
+	border-top: 1px solid #526E8E;
+	border-left: 1px solid #526E8E;
+    border-right:1px solid #BBD4EB;
+	border-bottom: 1px solid #BBD4EB;
+	padding-left:10px; 		
+	padding-top: 5px;
+	padding-right: 5px;
+	font-size:12px;
+	overflow:auto;
+}
+
+/* 鏂囨湰妗嗕腑,鐒︾偣杩涘叆鐨勬椂鍊欑殑鑳屾櫙鑹�,绋嬪簭涓槸鐢╦avascript璁剧疆鐨�,骞舵病鏈変娇鐢ㄤ吉绫� */
+.input_focus{
+	  background:#D1EAF9;
+}
+
+
+/* 鎻愪氦鎴栭噸缃寜閽殑鏍峰紡 */
+.form_btn{
+  border:1px solid #6990B3;
+  width:75px;
+  background:#BAD9E3;
+  margin-right:20px;
+  line-height:18px;
+  color:#295568;
+}
+
+.ok{
+	color:green
+}
+.error{
+	color:red
+}
+.info{
+	color:#295568;
+}
