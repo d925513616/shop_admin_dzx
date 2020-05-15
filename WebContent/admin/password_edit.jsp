@@ -44,7 +44,6 @@ $(function(){
 				if(data==psw) {
 					b[0] = true;
 					showOk($("#password").attr("id"));
-					alert("123");
 					
 				}
 				else{

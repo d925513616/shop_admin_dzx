@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" metadata-complete="true" version="3.0">
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.servlet.LoginServlet </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AdminServlet</servlet-name>
+    <servlet-class>com.servlet.AdminServlet </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminServlet</servlet-name>
+    <url-pattern>/AdminServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>RoleServlet</servlet-name>
+    <servlet-class>com.servlet.RoleServlet </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RoleServlet</servlet-name>
+    <url-pattern>/RoleServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>CateServlet</servlet-name>
+    <servlet-class>com.servlet.CateServlet </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CateServlet</servlet-name>
+    <url-pattern>/CateServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>GoodsServlet</servlet-name>
+    <servlet-class>com.servlet.GoodsServlet </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GoodsServlet</servlet-name>
+    <url-pattern>/GoodsServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>MemberServlet</servlet-name>
+    <servlet-class>com.servlet.MemberServlet </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MemberServlet</servlet-name>
+    <url-pattern>/MemberServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>OrderServlet</servlet-name>
+    <servlet-class>com.servlet.OrderServlet </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OrderServlet</servlet-name>
+    <url-pattern>/OrderServlet.do</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <filter-name>coudeFiliter</filter-name>
+    <filter-class>com.filter.CodeFiliter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>coudeFiliter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>sessionFiliter</filter-name>
+    <filter-class>com.filter.SessionFiliter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>sessionFiliter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+</web-app>

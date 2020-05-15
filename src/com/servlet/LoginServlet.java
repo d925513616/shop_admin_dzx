@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.beans.AdminInfo;
 import com.dao.AdminDao;
+import com.utils.Des;
+import com.utils.OtherUtil;
 
 
 public class LoginServlet extends HttpServlet {
@@ -32,7 +34,11 @@ public class LoginServlet extends HttpServlet {
 			request.setAttribute("msg", "ÇëµÇÂ¼");
 			request.getRequestDispatcher("/login.jsp").forward(request, response);	
 		}
-		AdminInfo admin = admindao.login(adminName, password);
+		String DPassword = null;
+		if(!OtherUtil.StrIsNullOrEmpty(password)) {
+			DPassword = Des.encStr(password);
+		}
+		AdminInfo admin = admindao.login(adminName, DPassword);
 		if(admin != null) {
 			if("1".equals(admin.getState())) {
 				request.getSession().setAttribute("now_admin", admin);
