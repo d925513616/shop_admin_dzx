@@ -140,9 +140,7 @@ public class GoodsServlet extends HttpServlet {
 		PageInfo page = PageUtil.getPageInfo(pageSize, rowCount, pageIndex);
 	
 		List<GoodsInfo> list = goodsdao.getGoodsByCondition(findGoodName,bigId,smallId,page);
-		for(GoodsInfo g:list) {
-			System.out.println(g);
-		}
+		
 		request.setAttribute("list", list);
 		request.setAttribute("page", page);
 		
@@ -200,6 +198,7 @@ public class GoodsServlet extends HttpServlet {
 			}
 		}
 	}
+	
 
 	
 

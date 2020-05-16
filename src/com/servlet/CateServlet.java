@@ -164,7 +164,7 @@ public class CateServlet extends HttpServlet {
 		String cateName = request.getParameter("cateName");
 		String startName = request.getParameter("startName");
 		CateInfo cates = catedao.getCateByName(cateName);
-		if(cates!=null&&!startName.equals(cateName)) {
+		if(cates!=null&&!cateName.equals(startName)) {
 			response.getWriter().print("分类名已存在！");
 		}
 		else {

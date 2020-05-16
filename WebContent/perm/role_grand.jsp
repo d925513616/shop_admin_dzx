@@ -40,7 +40,13 @@ $(function(){
 		}		
 	});
 });
-
+function yanzheng(){
+	if(!$("input[type=checkbox]").is(':checked')){
+		alert("请选择权限");
+		return false;
+	}
+	
+}
 
 </script>
 </head>
@@ -80,7 +86,7 @@ $(function(){
 	 </tr>
  </c:forEach>
  </table>
-	<input type="submit" value="保存修改">
+	<input type="submit" onclick="return yanzheng()" value="保存修改">
  </form>
 </body>
 </html>

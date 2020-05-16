@@ -1,6 +1,7 @@
 package com.jdbc;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -25,25 +26,32 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 public class DBUtil {
 	private DBUtil() {}
-
-	private static DataSource dataSource;
-	static  {
-		dataSource=new ComboPooledDataSource("mysql");
-		
+	private static String url = "jdbc:mysql://localhost:3306/dzx?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai";
+	private static String user = "root";
+	private static String password = "root";
+	
+	static {
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			//No suitable driver found for jdbc:mysql://localhost:3306/d
+		} catch (ClassNotFoundException e) {
+			
+			e.printStackTrace();
+		}
 	}
 	
 	public static Connection getConn() {
-		Connection conn=null;
+	 
 		try {
-			System.out.println("开始获取连接");
+			System.out.println("开始连接");
 			
-			conn= dataSource.getConnection();
-			System.out.println("成功");
+			Connection conn = DriverManager.getConnection(url, user, password);
+			
 			return conn;
 		} catch (SQLException e) {
 		
 			e.printStackTrace();
-			System.out.print("失败");
+			System.out.print("连接失败");
 			throw new RuntimeException(e);
 		}
 	}

@@ -52,7 +52,7 @@
 	</c:forEach>
     <li> <a class="head">网站前台</a>
       <ul>
-        <li><a href="http://localhost:8080/shop" target="_blank"><img src="images/main_50.gif" /><label>网站前台</label></a></li>
+        <li><a href="http://localhost:8080/shop-web/index.jsp" target="_blank"><img src="images/main_50.gif" /><label>网站前台</label></a></li>
       </ul>
     </li>
   </ul>

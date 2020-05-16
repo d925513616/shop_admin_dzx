@@ -89,10 +89,10 @@ function showOk(item){
 	 	<td class="td_input_short"> 
 	 		<select name="pid">
 	 			<c:forEach var="l" items="${list }">
-	 				<c:if test="${l.id==cate.pid }">
+	 				<c:if test="${l.id==cate.parentId }">
 						<option value="${l.id }" selected>${l.cateName }</option>
 					</c:if>
-					<c:if test="${l.id!=cate.pid  }">
+					<c:if test="${l.id!=cate.parentId  }">
 						<option value="${l.id }">${l.cateName }</option>
 					</c:if>
 	 				

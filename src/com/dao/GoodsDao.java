@@ -91,7 +91,7 @@ public class GoodsDao {
 		try {
 			stm=conn.createStatement();
 			String sql="select count(*) count from"
-					+ "(select g.id,goodsName,unit,price,CateName,c.id cid, pictureData,des from goodsinfo g left join cateinfo c on bigcateid=c.id) a"
+					+ "(select g.id,goodsName,unit,price,CateName,c.id cid, pictureData,g.des from goodsinfo g left join cateinfo c on bigcateid=c.id) a"
 					+ " left join (select g.id,CateName,c.id cid from goodsinfo g left join cateinfo c on smallcateid=c.id) b"
 					+ " on a.id = b.id where 1=1 ";
 			

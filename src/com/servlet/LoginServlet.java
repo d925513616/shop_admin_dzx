@@ -30,10 +30,7 @@ public class LoginServlet extends HttpServlet {
 		String adminName = request.getParameter("adminName");
 		String password = request.getParameter("password");
 		String msg = request.getParameter("msg");
-		if(msg != null) {
-			request.setAttribute("msg", "ÇëµÇÂ¼");
-			request.getRequestDispatcher("/login.jsp").forward(request, response);	
-		}
+		
 		String DPassword = null;
 		if(!OtherUtil.StrIsNullOrEmpty(password)) {
 			DPassword = Des.encStr(password);
@@ -53,6 +50,11 @@ public class LoginServlet extends HttpServlet {
 				request.getRequestDispatcher("/login.jsp").forward(request, response);
 				
 			}
+		}
+		else if(msg != null) {
+			request.setAttribute("msg", "ÇëµÇÂ¼");
+			request.getRequestDispatcher("/login.jsp").forward(request, response);	
+			return ;
 		}
 		else {
 			request.setAttribute("msg", "ÓÃ»§Ãû»òÃÜÂë´íÎó");

@@ -28,6 +28,9 @@
 		function del(){
 			return confirm("此操作将删除当前一级分类及其包含的全部二级分类，是否继续？");
 		}
+		function del2(){
+			return confirm("此操作将使部分商品失去分类，是否继续？");
+		}
 </script>
 </head>
 <body>
@@ -55,7 +58,7 @@
 				<td>
 				<c:forEach var="smallcate" items="${bigcate.subCateList }">
 					<a href="CateServlet.do?flag=select&id=${smallcate.id }">修改</a> |
-			    	<a href="CateServlet.do?flag=del&id=${smallcate.id }">删除</a><br>
+			    	<a onclick="return del2()"href="CateServlet.do?flag=del&id=${smallcate.id }">删除</a><br>
 				</c:forEach>
 					
 				</td>
